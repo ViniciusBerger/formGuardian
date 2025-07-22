@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "FormGuardian",
+  "version": "1.0",
+  "description": "Warns if sensitive info is being sent through insecure forms.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+  "16": "images/fg-icon16.png",
+  "48": "images/fg-icon48.png",
+  "128": "images/fg-icon128.png"
+},
+  "action": {
+  "default_icon": {
+  "16": "images/fg-icon16.png",
+  "48": "images/fg-icon48.png",
+  "128": "images/fg-icon128.png"
+},
+  "default_popup": "src/popup.html"
+},
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
