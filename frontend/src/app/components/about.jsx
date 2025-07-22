@@ -1,7 +1,7 @@
 
 
 export const About = ()=> {
-    <div>
+    return (<div>
       <section className="px-6 py-16 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-4">What is FormGuardian?</h2>
         
@@ -10,5 +10,5 @@ export const About = ()=> {
         </p>
         
       </section>
-    </div>
+    </div>)
 }
